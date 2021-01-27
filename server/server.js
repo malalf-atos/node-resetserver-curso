@@ -14,13 +14,9 @@ app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json
 app.use(bodyParser.json())
 
-// const mainRoutes = require('./routes/usuario');
-// app.use(mainRoutes, (req, res, next) => {
-//     console.log('Request Type:', req.method);
-//     next();
-// });
+// Configuración global de rutas
+app.use(require('./routes/index'));
 
-app.use(require('./routes/usuario'));
 
 let urlDB = process.env.URLDB;
 
